@@ -1,0 +1,10 @@
+
+/API/bin
+/API/obj
+/Core/bin
+API/TaskManager.API.csproj.user
+/Core/obj
+/Infrastructure/bin
+/Infrastructure/obj
+/Portal/bin
+/Portal/obj
