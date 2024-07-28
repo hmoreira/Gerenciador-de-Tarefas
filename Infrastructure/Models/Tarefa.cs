@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace TaskManager.Infrastructure.Models
+﻿namespace TaskManager.Infrastructure.Models
 {
-    public partial class Tarefa
+    public class Tarefa
     {
         public int Id { get; set; }
         public string Titulo { get; set; } = null!;
@@ -12,5 +9,8 @@ namespace TaskManager.Infrastructure.Models
         public int UsuarioResponsavelId { get; set; }
         public int UsuarioCriadorId { get; set; }
         public short Status { get; set; }
+
+        public virtual Usuario UsuarioCriador { get; set; } = null!;
+        public virtual Usuario UsuarioResponsavel { get; set; } = null!;
     }
 }
