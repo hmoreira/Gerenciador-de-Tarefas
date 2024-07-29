@@ -4,6 +4,7 @@
 
  Pra teste da API :
 
+1. Executar o Docker localmente;
 1. Na raiz do projeto executar <b>docker-composer up</b> pra criar os containers da API e do SQL Server no Docker;
 2. Em seguida executar o script <b>TaskManager.sql</b> (localizado na raiz do projeto) no SSMS pra criacao da base de dados do projeto e do usuario master;
 3. Pra login do usuário master usar o endpoint <b>/api/user/login</b> com username <b>master</b> e senha <b>e10VFOqJKiB1XTh</b>;
