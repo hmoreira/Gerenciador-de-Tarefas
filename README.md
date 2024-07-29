@@ -14,5 +14,6 @@
 # Pontos de Melhoria
 
 - Não permitir remoção do usuario master;
-- Não permitir a exclusão de usuários com tarefas associadas.
+- Não permitir a exclusão de usuários com tarefas associadas;
+- Inclusão do projeto de testes no Docker Compose.
  
