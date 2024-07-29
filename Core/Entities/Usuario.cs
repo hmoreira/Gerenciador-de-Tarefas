@@ -12,7 +12,7 @@ namespace TaskManager.Core.Entities
             Senha = senha;
             Username = username;
         }
-
+        public Usuario() { }
         public int Id { get; set; }
         [Required]
         public string Nome { get; set; } = null!;

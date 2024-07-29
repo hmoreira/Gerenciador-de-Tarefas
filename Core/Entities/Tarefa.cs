@@ -27,9 +27,7 @@ namespace TaskManager.Core.Entities
         [Required]
         [Range(1, int.MaxValue)]
         public int UsuarioResponsavelId { get; set; }
-        public Usuario UsuarioResponsavel { get; set; } = null!;
-        [Required]
-        [Range(1, int.MaxValue)]
+        public Usuario UsuarioResponsavel { get; set; } = null!;        
         public int UsuarioCriadorId { get; set; }
         public Usuario UsuarioCriador { get; set; } = null!;
     }

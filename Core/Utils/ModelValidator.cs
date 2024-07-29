@@ -25,6 +25,12 @@ namespace TaskManager.Core.Utils
                 if (string.IsNullOrEmpty(user.Username) && !isUpdate)
                     results.Add(new ValidationResult("Username obrigatorio pra criacao de usuario"));
             }
+            else //tarefa
+            {
+                var tarefa = (Tarefa)model;
+                if (tarefa.UsuarioCriadorId == 0 && isUpdate)
+                    results.Add(new ValidationResult("Usuario criador da tarefaobrigatoria pra criacao de usuario"));
+            }
 
             return results;
         }        

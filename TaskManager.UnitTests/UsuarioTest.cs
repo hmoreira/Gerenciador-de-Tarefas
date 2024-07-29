@@ -1,6 +1,7 @@
 using TaskManager.Core.Enums;
 using TaskManager.Core.Utils;
 using TaskManager.Core.Entities;
+using TaskManager.Core.Services.Usuario;
 
 namespace TaskManager.UnitTests
 {
@@ -45,6 +46,18 @@ namespace TaskManager.UnitTests
             var model = new Usuario("Heber", UserFuncaoEnum.Regular, "", "970803");
             var result = ModelValidator.ValidateModel(model);
             Assert.False(result.Count == 0);
+        }
+        [Fact]
+        public void ValidaUsuarioAdmin_Success()
+        {
+            var model = new Usuario("Heber", UserFuncaoEnum.Admin, "", "970803");            
+            Assert.True(ValidaFuncao.IsAdmin(model.Funcao));
+        }
+        [Fact]
+        public void ValidaUsuarioAdmin_Fail()
+        {
+            var model = new Usuario("Heber", UserFuncaoEnum.Regular, "", "970803");
+            Assert.False(ValidaFuncao.IsAdmin(model.Funcao));
         }
     }
 }

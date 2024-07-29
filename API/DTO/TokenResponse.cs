@@ -4,6 +4,6 @@
     {
         public string AccessToken { get; set; } = null!;
         public double ExpiresIn { get; set; }
-        public UserPutGet User { get; set; } = null!;
+        public UsuarioPutGet User { get; set; } = null!;
     }
 }

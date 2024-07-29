@@ -48,14 +48,18 @@ namespace TaskManager.API
             {
                 cfg.CreateMap<Tarefa, Core.Entities.Tarefa>();
                 cfg.CreateMap<Usuario, Core.Entities.Usuario>();
-                cfg.CreateMap<Core.Entities.Usuario, UserPutGet>();
+                cfg.CreateMap<Core.Entities.Usuario, UsuarioPutGet>();                 
+                cfg.CreateMap<UsuarioPutGet, Core.Entities.Usuario>();
+                cfg.CreateMap<Core.Entities.Tarefa, TarefaPutGet>();
+                cfg.CreateMap<TarefaPutGet, Core.Entities.Tarefa>();
+                cfg.CreateMap<TarefaPost, Core.Entities.Tarefa>();
                 cfg.CreateMap<Core.Entities.Tarefa, Tarefa>();
             });
             var mapper = configMapper.CreateMapper();
 
-            services.AddDbContext<SQLServerContext>();
+            services.AddDbContext<SQLServerContext>(ServiceLifetime.Scoped);
             services.AddSingleton(mapper);
-            services.AddTransient<IUserRepository, EFUserRepository>();
+            services.AddTransient<IUsuarioRepository, EFUsuarioRepository>();
             services.AddTransient<ITarefaRepository, EFTarefaRepository>();
 
             var configAuthentication = configuration.GetSection("Authentication");

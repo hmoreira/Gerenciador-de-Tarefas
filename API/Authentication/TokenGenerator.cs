@@ -8,7 +8,7 @@ namespace TaskManager.API.Authentication
 {
     public class TokenGenerator
     {
-        public static TokenResponse GenerateJwt(UserPutGet user, AuthenticationData authenticationData)
+        public static TokenResponse GenerateJwt(UsuarioPutGet user, AuthenticationData authenticationData)
         {
             var claims = new List<Claim>();
 

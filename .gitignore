@@ -8,3 +8,5 @@ API/TaskManager.API.csproj.user
 /Infrastructure/obj
 /Portal/bin
 /Portal/obj
+/TaskManager.UnitTests/bin
+/TaskManager.UnitTests/bin
